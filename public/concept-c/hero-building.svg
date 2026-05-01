@@ -1,0 +1,54 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="128" y1="56" x2="790" y2="496" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17354D"/>
+      <stop offset="0.52" stop-color="#11283B"/>
+      <stop offset="1" stop-color="#081722"/>
+    </linearGradient>
+    <linearGradient id="front" x1="392" y1="18" x2="693" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2E8EF"/>
+      <stop offset="0.28" stop-color="#C1CBD7"/>
+      <stop offset="0.6" stop-color="#8B9CAF"/>
+      <stop offset="0.84" stop-color="#415567"/>
+      <stop offset="1" stop-color="#142331"/>
+    </linearGradient>
+    <linearGradient id="side" x1="695" y1="38" x2="819" y2="514" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E8298"/>
+      <stop offset="0.36" stop-color="#384B5D"/>
+      <stop offset="1" stop-color="#08131D"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="430" y1="0" x2="566" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6EBF1"/>
+      <stop offset="1" stop-color="#AAB6C4"/>
+    </linearGradient>
+    <pattern id="frontGrid" width="54" height="54" patternUnits="userSpaceOnUse" patternTransform="matrix(1 -0.18 0 1 0 0)">
+      <path d="M0.5 53.5V0.5H53.5" stroke="rgba(10,24,37,0.24)"/>
+      <path d="M0 0.5H54" stroke="rgba(255,255,255,0.18)"/>
+    </pattern>
+    <pattern id="sideGrid" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="matrix(1 -0.22 0 1 0 0)">
+      <path d="M0.5 47.5V0.5H47.5" stroke="rgba(6,15,24,0.3)"/>
+      <path d="M0 0.5H48" stroke="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="620" fill="url(#sky)"/>
+  <circle cx="680" cy="104" r="138" fill="#486D8D" fill-opacity="0.22"/>
+  <path d="M448 24H900V620H340L384 486V156L448 24Z" fill="#102638" fill-opacity="0.36"/>
+  <path d="M410 0H900V620H292L352 468V182L410 0Z" fill="url(#front)"/>
+  <path d="M620 0H900V620H614L568 452V150L620 0Z" fill="url(#side)"/>
+  <path d="M410 0H620L568 150L352 182L410 0Z" fill="url(#cap)"/>
+  <path d="M352 182L568 150V452L352 468V182Z" fill="url(#frontGrid)" fill-opacity="0.94"/>
+  <path d="M568 150L900 0V620L614 620L568 452V150Z" fill="url(#sideGrid)" fill-opacity="0.7"/>
+  <g opacity="0.4" stroke="white" stroke-width="2">
+    <path d="M380 226L568 208"/>
+    <path d="M380 280L568 262"/>
+    <path d="M380 334L568 316"/>
+    <path d="M380 388L568 370"/>
+  </g>
+  <g opacity="0.24" stroke="#112230" stroke-width="2">
+    <path d="M426 162V464"/>
+    <path d="M474 156V460"/>
+    <path d="M522 150V456"/>
+  </g>
+  <path d="M568 150L620 0H654L602 154L568 150Z" fill="#F4F6F8" fill-opacity="0.46"/>
+</svg>

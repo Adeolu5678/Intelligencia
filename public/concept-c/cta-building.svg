@@ -1,0 +1,21 @@
+<svg width="1600" height="340" viewBox="0 0 1600 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="124" y1="48" x2="1342" y2="302" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4E6A8A"/>
+      <stop offset="0.48" stop-color="#203A53"/>
+      <stop offset="1" stop-color="#0A1722"/>
+    </linearGradient>
+    <pattern id="diag" width="44" height="44" patternUnits="userSpaceOnUse" patternTransform="rotate(36)">
+      <path d="M0.5 43.5V0.5H43.5" stroke="rgba(255,255,255,0.09)"/>
+    </pattern>
+    <pattern id="diag2" width="42" height="42" patternUnits="userSpaceOnUse" patternTransform="rotate(-34)">
+      <path d="M0.5 41.5V0.5H41.5" stroke="rgba(255,255,255,0.08)"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="340" fill="url(#bg)"/>
+  <circle cx="520" cy="40" r="190" fill="white" fill-opacity="0.05"/>
+  <path d="M-80 118L230 340H-80V118Z" fill="url(#diag2)" fill-opacity="0.6"/>
+  <path d="M1170 -20L1600 104V340H1262L1170 -20Z" fill="url(#diag)" fill-opacity="0.86"/>
+  <path d="M1020 340L1188 78L1398 18L1600 176V340H1020Z" fill="#0D2131" fill-opacity="0.72"/>
+  <path d="M1244 340L1346 138L1500 72L1600 164V340H1244Z" fill="#08131D" fill-opacity="0.9"/>
+</svg>

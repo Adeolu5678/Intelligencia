@@ -1,0 +1,223 @@
+{
+  "project": "Intelligencia",
+  "version": "1.0",
+  "based_on_asset_map": "asset_map.json",
+  "project_context": {
+    "business_identity": "Premium technology consulting and management firm helping companies build websites, systems, workflows, and ongoing technology oversight.",
+    "target_audience": "B2B companies and organizations looking to automate operations, scale technical infrastructure, or outsource technology management.",
+    "geographic_cultural_context": "Global corporate sector. Imagery should feel internationally credible and globally legible, with diverse professional representation where people appear. Avoid defaulting to a narrow Western startup stereotype or region-specific clichés unless a later brief explicitly asks for a local market bias.",
+    "desired_visual_tone": [
+      "premium",
+      "minimal",
+      "executive",
+      "cinematic restraint",
+      "product-led",
+      "enterprise",
+      "realistic",
+      "disciplined"
+    ],
+    "quality_goal": "Believable, editorial-grade, high-trust imagery that supports premium B2B positioning without feeling like stock photography."
+  },
+  "global_positive_doctrine": {
+    "core_principles": [
+      "Aim for editorial realism over glossy advertising.",
+      "Use disciplined, composed scenes with strong structure and clear focal hierarchy.",
+      "Favor executive-grade technology environments, strategic working sessions, controlled operations, and refined digital contexts.",
+      "When people appear, show credible professionals with natural posture, believable expressions, and business-appropriate styling.",
+      "Keep images globally credible for a corporate audience rather than tied to one local office cliché.",
+      "Bias toward subtle sophistication: premium interiors, clean devices, refined materials, measured light, and intentional negative space.",
+      "Show technology as governed, useful, and integrated into business decision-making.",
+      "Keep compositions center-safe because current hero slots collapse responsively on smaller screens.",
+      "Use realistic scale, perspective, and lighting; nothing should feel synthetic, exaggerated, or concept-art-like.",
+      "Maintain visual calm so hero copy can remain dominant in the layout."
+    ],
+    "style_guidance": [
+      "documentary editorial realism",
+      "luxury-minimal corporate atmosphere",
+      "calm cinematic restraint",
+      "clean tonal contrast",
+      "sharp but natural detail",
+      "subtle texture, not heavy stylization"
+    ],
+    "business_alignment": [
+      "Images should suggest competence, structure, trust, systems thinking, and managed complexity.",
+      "The company is not a generic agency, startup, or IT repair service; imagery must reflect strategic business value.",
+      "Where screens or interfaces appear, they should feel bespoke and plausible, not fake sci-fi dashboards."
+    ],
+    "people_guidance": [
+      "Use diverse professionals when people are present.",
+      "Prefer small groups, focused one-on-one reviews, or a single confident subject over crowded teams.",
+      "Expressions should be composed, thoughtful, and serious rather than overly cheerful or performative."
+    ],
+    "environment_guidance": [
+      "Favor modern corporate environments, architecture, refined meeting spaces, controlled operations rooms, premium studios, or disciplined digital workspaces.",
+      "Use clean surfaces, purposeful objects, and restrained color environments.",
+      "Backgrounds should support the subject rather than compete with it."
+    ],
+    "aspect_ratio_guidance": [
+      "Primary output ratio is 5:4 landscape.",
+      "Compose with safe margins around the subject so vertical cropping remains acceptable when the slot stacks on mobile.",
+      "Avoid edge-critical details that would break if the left or right side is cropped slightly."
+    ]
+  },
+  "global_negative_doctrine": {
+    "avoid": [
+      "generic stock-photo handshakes",
+      "posed group smiles at camera",
+      "call center or help-desk aesthetics",
+      "cheesy innovation imagery",
+      "floating holograms",
+      "sci-fi neon interfaces",
+      "overly blue tech glow everywhere",
+      "fake code overlays",
+      "abstract polygon backgrounds",
+      "overcrowded dashboards",
+      "unrealistic control rooms",
+      "random server racks with no narrative purpose",
+      "startup coworking clichés",
+      "exaggerated cinematic drama",
+      "perfectly symmetrical AI-looking faces",
+      "plastic skin",
+      "distorted anatomy",
+      "awkward hands",
+      "unnatural eye contact",
+      "toy-like miniature scenes",
+      "hyper-saturated color grading",
+      "cartoonish concept art",
+      "obvious CGI",
+      "promotional conference-stage energy",
+      "over-branded office scenes",
+      "consumer-tech vibes"
+    ],
+    "composition_failures": [
+      "tiny subject lost in empty space",
+      "multiple competing focal points",
+      "busy backgrounds behind the main subject",
+      "important content pushed to the extreme edge",
+      "too much visual clutter for a hero slot"
+    ],
+    "context_failures": [
+      "imagery that reads as small business only",
+      "imagery that reads as generic SaaS startup marketing",
+      "imagery that implies basic IT support rather than consulting and management",
+      "imagery with no connection to business systems, strategy, or operational control"
+    ]
+  },
+  "reusable_prompt_template": {
+    "template": "Create a {style_block} image for {brand_context}. Show {subject_block} in {environment_block}. The image should communicate {intent_block} for a {audience_block} audience. Use {composition_block}. Keep the scene {realism_block}. Output in {aspect_ratio} {orientation}, suitable for a website hero at {target_resolution}.",
+    "usage_notes": [
+      "Start with the positive doctrine, then add slot-specific subject, environment, intent, and composition blocks.",
+      "Append one short negative block where the generator supports negative prompting.",
+      "Do not overload a prompt with too many nouns; preserve one clear scene and one main idea.",
+      "If an image becomes too abstract, add one concrete human or environmental anchor.",
+      "If an image becomes too stock-like, reduce smiles, remove handshake logic, and increase operational specificity."
+    ]
+  },
+  "modular_prompt_blocks": {
+    "style_blocks": {
+      "editorial_executive": "premium editorial-realistic, luxury-minimal, enterprise-grade, calm cinematic restraint, natural light with refined contrast",
+      "documentary_operations": "documentary editorial realism, controlled corporate atmosphere, precise and believable, quiet confidence",
+      "product_led_digital": "bespoke digital product realism, premium interface-adjacent environment, refined and credible, high-trust corporate tone"
+    },
+    "brand_context_blocks": {
+      "intelligencia_core": "Intelligencia, a premium technology consulting and management firm serving corporate clients",
+      "intelligencia_systems": "Intelligencia, positioned as a strategic partner for systems, workflows, and technology oversight",
+      "intelligencia_web": "Intelligencia, positioned as a premium website and digital experience partner for serious businesses"
+    },
+    "audience_blocks": {
+      "global_b2b": "global B2B decision-makers, operators, and executives",
+      "enterprise_ops": "companies and organizations with operational complexity and multi-system environments",
+      "executive_buyers": "senior business stakeholders looking for trust, structure, and clear technical leadership"
+    },
+    "subject_blocks": {
+      "executive_technology_scene": "a composed executive-grade technology scene with one or two professionals reviewing strategic digital systems",
+      "service_model_orchestration": "a refined business-technology composition suggesting coordinated services, connected systems, and structured delivery",
+      "website_review": "a polished website or interface review scene with a high-end screen-led workspace and clear design focus",
+      "workflow_control": "a controlled operations or workflow review scene showing process visibility and connected activity",
+      "technology_oversight": "a senior oversight scene with a leader or small team reviewing infrastructure, performance, or strategic technology decisions",
+      "philosophy_order": "a restrained premium scene that conveys order, focus, clarity, and disciplined thinking",
+      "transformation_proof": "a high-trust business transformation scene suggesting outcomes, improvement, and credible execution",
+      "consultation_focus": "a quiet executive consultation scene with focused review, assessment, and decision-making"
+    },
+    "environment_blocks": {
+      "premium_boardroom": "a modern, refined corporate interior with clean materials, subtle architectural detail, and premium restraint",
+      "digital_workspace": "a disciplined digital workspace with premium monitors, clean desk surfaces, and believable interface presence",
+      "operations_room": "a calm, high-functioning operations environment with visible systems and controlled visual order",
+      "editorial_office": "an upscale editorial-style office environment with soft depth, clean lines, and intentional negative space"
+    },
+    "intent_blocks": {
+      "strategic_leadership": "strategic technology leadership, confidence, and business control",
+      "integrated_service_model": "an integrated service model rather than disconnected offerings",
+      "digital_credibility": "digital polish, design rigor, and corporate credibility",
+      "operational_clarity": "operational clarity, improved workflow, and managed complexity",
+      "oversight_governance": "oversight, governance, continuity, and senior decision support",
+      "brand_discipline": "clarity, discipline, systems thinking, and premium restraint",
+      "credible_outcomes": "credible outcomes, transformation, and trustworthy execution",
+      "serious_consultation": "a serious but approachable consultation pathway"
+    },
+    "composition_blocks": {
+      "hero_balanced": "a center-safe 5:4 composition, one dominant focal plane, readable subject separation, and enough negative space to preserve calm",
+      "hero_subject_right": "a balanced 5:4 composition with the focal subject near center-right, clear depth, and no clutter at the edges",
+      "hero_subject_center": "a centered 5:4 composition with strong shape hierarchy, quiet background control, and mobile-safe cropping tolerance"
+    },
+    "realism_blocks": {
+      "natural_premium": "highly realistic, tactile, naturally lit, and free from stock-photo posing",
+      "calm_documentary": "believable, measured, documentary-realistic, and visually composed without theatrical exaggeration",
+      "screen_realism": "realistic and premium, with plausible screens or interfaces and no fake futuristic overlays"
+    },
+    "negative_suffix_block": "Avoid generic stock-photo behavior, posed smiles at camera, handshakes, cheesy innovation tropes, fake holograms, neon sci-fi UI, distorted anatomy, plastic skin, cluttered backgrounds, and any help-desk or startup-cliche aesthetic."
+  },
+  "slot_prompts": {
+    "home.hero.primary_visual": {
+      "asset_key": "home.hero.primary_visual",
+      "intended_filename": "home-hero-primary-visual.webp",
+      "recommended_prompt": "Create a premium editorial-realistic, luxury-minimal, enterprise-grade, calm cinematic restraint image for Intelligencia, a premium technology consulting and management firm serving corporate clients. Show a composed executive-grade technology scene with one or two professionals reviewing strategic digital systems in a modern, refined corporate interior with clean materials, subtle architectural detail, and premium restraint. The image should communicate strategic technology leadership, confidence, and business control for global B2B decision-makers, operators, and executives. Use a center-safe 5:4 composition, one dominant focal plane, readable subject separation, and enough negative space to preserve calm. Keep the scene highly realistic, tactile, naturally lit, and free from stock-photo posing. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid generic stock-photo behavior, posed smiles at camera, handshakes, cheesy innovation tropes, fake holograms, neon sci-fi UI, distorted anatomy, plastic skin, cluttered backgrounds, and any help-desk or startup-cliche aesthetic."
+    },
+    "services.hero.service_model_visual": {
+      "asset_key": "services.hero.service_model_visual",
+      "intended_filename": "services-hero-service-model-visual.webp",
+      "recommended_prompt": "Create a documentary editorial realism, controlled corporate atmosphere, precise and believable image for Intelligencia, positioned as a strategic partner for systems, workflows, and technology oversight. Show a refined business-technology composition suggesting coordinated services, connected systems, and structured delivery in an upscale editorial-style office environment with soft depth, clean lines, and intentional negative space. The image should communicate an integrated service model rather than disconnected offerings for companies and organizations with operational complexity and multi-system environments. Use a centered 5:4 composition with strong shape hierarchy, quiet background control, and mobile-safe cropping tolerance. Keep the scene believable, measured, documentary-realistic, and visually composed without theatrical exaggeration. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid generic stock-photo behavior, posed smiles at camera, handshakes, cheesy innovation tropes, fake holograms, neon sci-fi UI, distorted anatomy, plastic skin, cluttered backgrounds, and any help-desk or startup-cliche aesthetic."
+    },
+    "services.website_development.hero.visual": {
+      "asset_key": "services.website_development.hero.visual",
+      "intended_filename": "website-development-hero-visual.webp",
+      "recommended_prompt": "Create a bespoke digital product realism, premium interface-adjacent environment, refined and credible image for Intelligencia, positioned as a premium website and digital experience partner for serious businesses. Show a polished website or interface review scene with a high-end screen-led workspace and clear design focus in a disciplined digital workspace with premium monitors, clean desk surfaces, and believable interface presence. The image should communicate digital polish, design rigor, and corporate credibility for senior business stakeholders looking for trust, structure, and clear technical leadership. Use a balanced 5:4 composition with the focal subject near center-right, clear depth, and no clutter at the edges. Keep the scene realistic and premium, with plausible screens or interfaces and no fake futuristic overlays. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid generic browser mockups, cheesy startup desk culture, RGB gaming aesthetics, fake code overlays, and over-stylized UI."
+    },
+    "services.systems_automation.hero.visual": {
+      "asset_key": "services.systems_automation.hero.visual",
+      "intended_filename": "systems-automation-hero-visual.webp",
+      "recommended_prompt": "Create a documentary editorial realism, controlled corporate atmosphere, precise and believable image for Intelligencia, positioned as a strategic partner for systems, workflows, and technology oversight. Show a controlled operations or workflow review scene showing process visibility and connected activity in a calm, high-functioning operations environment with visible systems and controlled visual order. The image should communicate operational clarity, improved workflow, and managed complexity for companies and organizations with operational complexity and multi-system environments. Use a center-safe 5:4 composition, one dominant focal plane, readable subject separation, and enough negative space to preserve calm. Keep the scene believable, measured, documentary-realistic, and visually composed without theatrical exaggeration. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid literal flowchart graphics, busy dashboards, sci-fi control rooms, chaotic screens, and generic IT support tropes."
+    },
+    "services.technology_management.hero.visual": {
+      "asset_key": "services.technology_management.hero.visual",
+      "intended_filename": "technology-management-hero-visual.webp",
+      "recommended_prompt": "Create a premium editorial-realistic, luxury-minimal, enterprise-grade, calm cinematic restraint image for Intelligencia, positioned as a strategic partner for systems, workflows, and technology oversight. Show a senior oversight scene with a leader or small team reviewing infrastructure, performance, or strategic technology decisions in a modern, refined corporate interior with clean materials, subtle architectural detail, and premium restraint. The image should communicate oversight, governance, continuity, and senior decision support for senior business stakeholders looking for trust, structure, and clear technical leadership. Use a centered 5:4 composition with strong shape hierarchy, quiet background control, and mobile-safe cropping tolerance. Keep the scene highly realistic, tactile, naturally lit, and free from stock-photo posing. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid help-desk aesthetics, support-center visuals, salesy group smiles, holographic interfaces, and cluttered monitoring walls."
+    },
+    "about.hero.brand_philosophy_visual": {
+      "asset_key": "about.hero.brand_philosophy_visual",
+      "intended_filename": "about-hero-brand-philosophy-visual.webp",
+      "recommended_prompt": "Create a premium editorial-realistic, luxury-minimal, enterprise-grade, calm cinematic restraint image for Intelligencia, a premium technology consulting and management firm serving corporate clients. Show a restrained premium scene that conveys order, focus, clarity, and disciplined thinking in an upscale editorial-style office environment with soft depth, clean lines, and intentional negative space. The image should communicate clarity, discipline, systems thinking, and premium restraint for global B2B decision-makers, operators, and executives. Use a centered 5:4 composition with strong shape hierarchy, quiet background control, and mobile-safe cropping tolerance. Keep the scene believable, measured, documentary-realistic, and visually composed without theatrical exaggeration. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid obvious corporate portrait clichés, motivational-poster energy, excessive symbolism, and decorative luxury for its own sake."
+    },
+    "case_studies.hero.proof_visual": {
+      "asset_key": "case_studies.hero.proof_visual",
+      "intended_filename": "case-studies-hero-proof-visual.webp",
+      "recommended_prompt": "Create a documentary editorial realism, controlled corporate atmosphere, precise and believable image for Intelligencia, a premium technology consulting and management firm serving corporate clients. Show a high-trust business transformation scene suggesting outcomes, improvement, and credible execution in a modern, refined corporate interior with clean materials, subtle architectural detail, and premium restraint. The image should communicate credible outcomes, transformation, and trustworthy execution for global B2B decision-makers, operators, and executives. Use a balanced 5:4 composition with the focal subject near center-right, clear depth, and no clutter at the edges. Keep the scene believable, measured, documentary-realistic, and visually composed without theatrical exaggeration. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid empty motivational symbolism, trophy imagery, celebration clichés, and anything that feels promotional instead of credible."
+    },
+    "contact.hero.consultation_visual": {
+      "asset_key": "contact.hero.consultation_visual",
+      "intended_filename": "contact-hero-consultation-visual.webp",
+      "recommended_prompt": "Create a premium editorial-realistic, luxury-minimal, enterprise-grade, calm cinematic restraint image for Intelligencia, a premium technology consulting and management firm serving corporate clients. Show a quiet executive consultation scene with focused review, assessment, and decision-making in an upscale editorial-style office environment with soft depth, clean lines, and intentional negative space. The image should communicate a serious but approachable consultation pathway for senior business stakeholders looking for trust, structure, and clear technical leadership. Use a center-safe 5:4 composition, one dominant focal plane, readable subject separation, and enough negative space to preserve calm. Keep the scene highly realistic, tactile, naturally lit, and free from stock-photo posing. Output in 5:4 landscape, suitable for a website hero at 1600x1280. Avoid aggressive sales energy, handshake clichés, crowded boardroom scenes, exaggerated friendliness, and distracting background action."
+    }
+  },
+  "recommended_first_test_asset": {
+    "asset_key": "home.hero.primary_visual",
+    "reason": "This is the flagship image on the homepage and the best quality gate for the whole system. If the prompt produces the right level of realism, authority, composition control, and premium tone here, the rest of the library can be tuned from that baseline.",
+    "success_criteria": [
+      "Immediately reads as premium B2B technology consulting rather than generic business stock",
+      "Feels realistic and globally credible",
+      "Has one strong focal plane and calm negative space",
+      "Survives a 5:4 hero crop and still reads well if slightly center-cropped on smaller screens",
+      "Suggests strategic technology leadership without fake futuristic visual language"
+    ]
+  }
+}

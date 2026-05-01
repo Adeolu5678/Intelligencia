@@ -1,0 +1,139 @@
+{
+  "project": "Intelligencia",
+  "generated_from": "Current baseline Next.js UI audit",
+  "notes": [
+    "Only real placeholders present in the current UI are included.",
+    "All current image slots are the shared hero-side visual rendered by components/page-hero.tsx.",
+    "Primary target is the desktop layout. Each slot collapses to full width on screens below 980px, so compositions should keep the subject centered with safe margins for vertical crop tolerance.",
+    "No testimonials, case study cards, service cards, or contact modules currently contain image placeholders."
+  ],
+  "total_slots": 8,
+  "slot_family": {
+    "component": "PageHero",
+    "ui_location": "Hero aside visual",
+    "desktop_layout_basis": {
+      "container_max_width_px": 1180,
+      "hero_grid_columns": "1.5fr / 0.85fr",
+      "hero_grid_gap_px": 24,
+      "placeholder_min_height_px": 320
+    },
+    "recommended_master_aspect_ratio": "5:4",
+    "recommended_master_orientation": "landscape",
+    "recommended_master_resolution": "1600x1280",
+    "rendering_note": "Export as high-quality WebP or JPEG with center-safe composition."
+  },
+  "pages": {
+    "home": [
+      {
+        "page": "Home",
+        "section": "Hero",
+        "asset_key": "home.hero.primary_visual",
+        "intended_filename": "home-hero-primary-visual.webp",
+        "purpose": "Establish the brand's premium technology consulting position and signal structured digital leadership on first load.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "strategic technology leadership",
+        "composition_notes": "Use a clean executive or systems-led corporate scene with strong structure and negative space. Avoid generic handshake or stock meeting tropes. Keep the focal subject slightly centered so the crop still works when the slot stacks on mobile."
+      }
+    ],
+    "services": [
+      {
+        "page": "Services",
+        "section": "Hero",
+        "asset_key": "services.hero.service_model_visual",
+        "intended_filename": "services-hero-service-model-visual.webp",
+        "purpose": "Frame the three-pillar service model as an integrated system rather than disconnected offerings.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "systems abstraction / enterprise operations",
+        "composition_notes": "Prefer an abstract but grounded enterprise technology composition suggesting coordination, structure, or orchestration. Avoid interface overload. Maintain enough visual calm for hero copy dominance."
+      }
+    ],
+    "services/website-development": [
+      {
+        "page": "Website Development",
+        "section": "Hero",
+        "asset_key": "services.website_development.hero.visual",
+        "intended_filename": "website-development-hero-visual.webp",
+        "purpose": "Support the premium website-development offer with a visual that suggests design rigor, digital polish, and business credibility.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "digital product / premium web experience",
+        "composition_notes": "Show a refined digital workspace, interface review, or screen-led composition that feels bespoke and corporate. Do not use cheesy browser mockups or exaggerated neon UI. Keep one clear dominant focal plane."
+      }
+    ],
+    "services/systems-automation": [
+      {
+        "page": "Systems & Automation",
+        "section": "Hero",
+        "asset_key": "services.systems_automation.hero.visual",
+        "intended_filename": "systems-automation-hero-visual.webp",
+        "purpose": "Communicate process improvement, operational flow, and connected systems without feeling overly technical or schematic.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "workflow operations / systems orchestration",
+        "composition_notes": "Use visual cues of coordinated movement, process visibility, or controlled operations. Avoid literal flowchart graphics unless they feel editorial and premium. Composition should read quickly at a glance."
+      }
+    ],
+    "services/technology-management": [
+      {
+        "page": "Technology Management",
+        "section": "Hero",
+        "asset_key": "services.technology_management.hero.visual",
+        "intended_filename": "technology-management-hero-visual.webp",
+        "purpose": "Position the service as senior oversight, governance, and technology decision-making support.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "executive oversight / infrastructure leadership",
+        "composition_notes": "Favor a composed leadership-oriented technology scene with monitoring, review, or strategic oversight cues. Avoid help-desk aesthetics. The image should feel calm, authoritative, and high-value."
+      }
+    ],
+    "about": [
+      {
+        "page": "About",
+        "section": "Hero",
+        "asset_key": "about.hero.brand_philosophy_visual",
+        "intended_filename": "about-hero-brand-philosophy-visual.webp",
+        "purpose": "Reinforce the firm's philosophy of clarity, systems thinking, and disciplined execution.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "brand philosophy / disciplined modernity",
+        "composition_notes": "Use a restrained premium image that suggests order, focus, and strategic intent. This slot should feel more philosophical and composed than operational. Avoid overly literal corporate portraits unless they are exceptional."
+      }
+    ],
+    "case-studies": [
+      {
+        "page": "Case Studies",
+        "section": "Hero",
+        "asset_key": "case_studies.hero.proof_visual",
+        "intended_filename": "case-studies-hero-proof-visual.webp",
+        "purpose": "Support the proof page with a visual that implies outcomes, transformation, and credible execution.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "business transformation / high-trust proof",
+        "composition_notes": "Use a confident editorial-style business or technology transformation image. It should feel outcome-oriented, not promotional. Preserve clean subject separation for readability against the adjacent copy block."
+      }
+    ],
+    "contact": [
+      {
+        "page": "Contact",
+        "section": "Hero",
+        "asset_key": "contact.hero.consultation_visual",
+        "intended_filename": "contact-hero-consultation-visual.webp",
+        "purpose": "Make the consultation page feel serious, low-friction, and executive-friendly without distracting from the inquiry action.",
+        "aspect_ratio": "5:4",
+        "orientation": "landscape",
+        "target_resolution": "1600x1280",
+        "visual_category": "consultation / decision environment",
+        "composition_notes": "Use a simple, composed scene suggesting focused conversation, assessment, or strategic review. Keep the image quieter than other pages so the form pathway remains the primary action."
+      }
+    ]
+  }
+}
