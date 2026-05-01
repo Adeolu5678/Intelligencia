@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
+import { PreloadedImage } from "@/components/preloaded-image";
 
 export type AnimatedTestimonialItem = {
   quote: string;
@@ -167,16 +166,15 @@ function AnimatedTestimonialImage({
 }: {
   testimonial: AnimatedTestimonialItem;
 }) {
-  const resolvedSrc = usePreloadedAssetSrc(testimonial.assetId, testimonial.src);
-
   return (
-    <Image
+    <PreloadedImage
+      assetId={testimonial.assetId}
       alt={testimonial.alt}
       className="animated-testimonials__image"
       draggable={false}
       fill
       sizes="(max-width: 820px) 82vw, 360px"
-      src={resolvedSrc}
+      src={testimonial.src}
     />
   );
 }

@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
-
-import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
+import { PreloadedImage } from "@/components/preloaded-image";
 import { AnimatedLayerButtonLink } from "@/components/ui/button";
 import { GetStartedButton } from "@/components/ui/get-started-button";
 
@@ -35,22 +33,20 @@ export function PageHero({
   variant = "split",
   image,
 }: HeroProps) {
-  const resolvedImageSrc = usePreloadedAssetSrc(image.assetId, image.src);
-
   if (variant === "backgroundCard") {
     return (
       <section className="card hero hero--background-card">
         <div className="hero-content">
           <div className="hero-copy">
-            <Image
+            <PreloadedImage
+              assetId={image.assetId}
               alt={image.alt}
               className="hero-copy__background"
               fill
               priority
               quality={100}
               sizes="(max-width: 820px) calc(100vw - 36px), (max-width: 1180px) 100vw, min(53.25vw, 890px)"
-              src={resolvedImageSrc}
-              unoptimized
+              src={image.src}
             />
             <div className="hero-copy__panel">
               <h1>{title}</h1>
@@ -113,12 +109,13 @@ export function PageHero({
           )}
         </div>
         <div className="hero-visual">
-          <Image
+          <PreloadedImage
+            assetId={image.assetId}
             alt={image.alt}
             className="hero-visual__image"
             fill
             sizes="(max-width: 980px) 100vw, 33vw"
-            src={resolvedImageSrc}
+            src={image.src}
           />
           {asideTitle && asideText ? (
             <div className="hero-visual__overlay">

@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
 import { BrandMark } from "@/components/brand-mark";
 import { FloatingNavbar } from "@/components/floating-navbar";
-import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
+import { PreloadedImage } from "@/components/preloaded-image";
 import { AnimatedLayerButtonLink } from "@/components/ui/button";
 import { FeatureCarousel } from "@/components/ui/feature-carousel";
 import FeatureSections from "@/components/ui/feature-sections";
@@ -13,11 +12,6 @@ import { GetStartedButton } from "@/components/ui/get-started-button";
 import { TestimonialCarousel } from "@/components/ui/profile-card-testimonial-carousel";
 
 export function HomePremium() {
-  const heroPanelSrc = usePreloadedAssetSrc(
-    "home-hero-panel",
-    "/images/home/home-hero-primary-visual.png",
-  );
-
   return (
     <div className="page-frame page-frame--full">
       <div className="site-shell site-shell--full">
@@ -27,14 +21,15 @@ export function HomePremium() {
           <section className="hero sticky-scene__content sticky-scene__content--hero">
             <div className="hero-content">
               <div className="hero-copy">
-                <Image
+                <PreloadedImage
+                  assetId="home-hero-panel"
                   alt=""
                   className="hero-copy__background"
                   fill
                   priority
                   quality={100}
                   sizes="(max-width: 820px) calc(100vw - 36px), (max-width: 1180px) 100vw, min(53.25vw, 890px)"
-                  src={heroPanelSrc}
+                  src="/images/home/home-hero-primary-visual.png"
                 />
                 <div className="hero-copy__panel">
                   <h1>

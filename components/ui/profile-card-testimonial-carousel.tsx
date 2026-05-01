@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
+import { PreloadedImage } from "@/components/preloaded-image";
 import { cn } from "@/lib/utils";
 
 export interface Testimonial {
@@ -78,10 +77,6 @@ export function TestimonialCarousel({
   }
 
   const currentTestimonial = items[currentIndex];
-  const desktopImageSrc = usePreloadedAssetSrc(
-    currentTestimonial.assetId,
-    currentTestimonial.imageUrl,
-  );
 
   const handleNext = () => {
     setCurrentIndex((index) => (index + 1) % items.length);
@@ -104,8 +99,9 @@ export function TestimonialCarousel({
               transition={{ duration: 0.35, ease: "easeInOut" }}
               className="testimonial-carousel__portrait-frame"
             >
-              <Image
-                src={desktopImageSrc}
+              <PreloadedImage
+                assetId={currentTestimonial.assetId}
+                src={currentTestimonial.imageUrl}
                 alt={currentTestimonial.name}
                 width={420}
                 height={460}
@@ -149,8 +145,9 @@ export function TestimonialCarousel({
               exit={{ opacity: 0 }}
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
-              <Image
-                src={desktopImageSrc}
+              <PreloadedImage
+                assetId={currentTestimonial.assetId}
+                src={currentTestimonial.imageUrl}
                 alt={currentTestimonial.name}
                 width={480}
                 height={480}
