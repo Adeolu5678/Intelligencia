@@ -6,11 +6,14 @@ import React, { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
+
 export type AnimatedTestimonialItem = {
   quote: string;
   name: string;
   designation?: string;
   src: string;
+  assetId?: string;
   alt: string;
   number?: string;
   includes?: string[];
@@ -82,14 +85,7 @@ export function AnimatedTestimonials({
                     key={testimonial.src}
                     transition={{ duration: 0.5, ease: "easeInOut" }}
                   >
-                    <Image
-                      alt={testimonial.alt}
-                      className="animated-testimonials__image"
-                      draggable={false}
-                      fill
-                      sizes="(max-width: 820px) 82vw, 360px"
-                      src={testimonial.src}
-                    />
+                    <AnimatedTestimonialImage testimonial={testimonial} />
                   </motion.div>
                 );
               })}
@@ -163,5 +159,24 @@ export function AnimatedTestimonials({
         </div>
       </div>
     </div>
+  );
+}
+
+function AnimatedTestimonialImage({
+  testimonial,
+}: {
+  testimonial: AnimatedTestimonialItem;
+}) {
+  const resolvedSrc = usePreloadedAssetSrc(testimonial.assetId, testimonial.src);
+
+  return (
+    <Image
+      alt={testimonial.alt}
+      className="animated-testimonials__image"
+      draggable={false}
+      fill
+      sizes="(max-width: 820px) 82vw, 360px"
+      src={resolvedSrc}
+    />
   );
 }

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 
+import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
 import { AnimatedLayerButtonLink } from "@/components/ui/button";
 import { GetStartedButton } from "@/components/ui/get-started-button";
 
@@ -14,6 +17,7 @@ type HeroProps = {
   asideText?: string;
   variant?: "split" | "backgroundCard";
   image: {
+    assetId?: string;
     src: string;
     alt: string;
   };
@@ -31,6 +35,8 @@ export function PageHero({
   variant = "split",
   image,
 }: HeroProps) {
+  const resolvedImageSrc = usePreloadedAssetSrc(image.assetId, image.src);
+
   if (variant === "backgroundCard") {
     return (
       <section className="card hero hero--background-card">
@@ -43,7 +49,7 @@ export function PageHero({
               priority
               quality={100}
               sizes="(max-width: 820px) calc(100vw - 36px), (max-width: 1180px) 100vw, min(53.25vw, 890px)"
-              src={image.src}
+              src={resolvedImageSrc}
               unoptimized
             />
             <div className="hero-copy__panel">
@@ -112,7 +118,7 @@ export function PageHero({
             className="hero-visual__image"
             fill
             sizes="(max-width: 980px) 100vw, 33vw"
-            src={image.src}
+            src={resolvedImageSrc}
           />
           {asideTitle && asideText ? (
             <div className="hero-visual__overlay">

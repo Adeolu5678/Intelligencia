@@ -13,11 +13,13 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
+import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
 import { cn } from "@/lib/utils";
 
 const FEATURES = [
   {
     id: "process-design",
+    assetId: "home-feature-carousel-process-design",
     label: "Process Design",
     icon: WorkflowCircle01Icon,
     image:
@@ -27,6 +29,7 @@ const FEATURES = [
   },
   {
     id: "website-development",
+    assetId: "home-feature-carousel-website-development",
     label: "Website Development",
     icon: WebProgrammingIcon,
     image:
@@ -36,6 +39,7 @@ const FEATURES = [
   },
   {
     id: "systems-workflows",
+    assetId: "home-feature-carousel-systems-workflows",
     label: "Systems & Workflows",
     icon: ComputerSettingsIcon,
     image:
@@ -45,6 +49,7 @@ const FEATURES = [
   },
   {
     id: "technology-management",
+    assetId: "home-feature-carousel-technology-management",
     label: "Technology Management",
     icon: AiCloudIcon,
     image:
@@ -54,6 +59,7 @@ const FEATURES = [
   },
   {
     id: "consulting",
+    assetId: "home-feature-carousel-consulting",
     label: "Consulting",
     icon: Briefcase01Icon,
     image:
@@ -63,6 +69,7 @@ const FEATURES = [
   },
   {
     id: "market-insight",
+    assetId: "home-feature-carousel-digital-positioning",
     label: "Digital Positioning",
     icon: GlobalSearchIcon,
     image:
@@ -72,6 +79,7 @@ const FEATURES = [
   },
   {
     id: "performance",
+    assetId: "home-feature-carousel-performance-visibility",
     label: "Performance Visibility",
     icon: Analytics01Icon,
     image:
@@ -221,13 +229,14 @@ export function FeatureCarousel({ className }: FeatureCarouselProps) {
                   }}
                   className="feature-carousel__card"
                 >
-                  <img
-                    src={feature.image}
+                  <FeatureCarouselImage
                     alt={feature.label}
+                    assetId={feature.assetId}
                     className={cn(
                       "feature-carousel__image",
                       !isActive && "feature-carousel__image--inactive"
                     )}
+                    src={feature.image}
                   />
 
                   <AnimatePresence>
@@ -266,3 +275,19 @@ export function FeatureCarousel({ className }: FeatureCarouselProps) {
 }
 
 export default FeatureCarousel;
+
+function FeatureCarouselImage({
+  alt,
+  assetId,
+  className,
+  src,
+}: {
+  alt: string;
+  assetId: string;
+  className: string;
+  src: string;
+}) {
+  const resolvedSrc = usePreloadedAssetSrc(assetId, src);
+
+  return <img src={resolvedSrc} alt={alt} className={className} />;
+}

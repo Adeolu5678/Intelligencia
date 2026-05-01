@@ -36,6 +36,7 @@ export default function AboutPage() {
         title="A firm built around structure, coherence, and technology judgment."
         description="The About page exists to deepen trust and explain why Intelligencia is organized differently from a typical web studio or disconnected technical vendor."
         image={{
+          assetId: "about-hero-panel",
           src: "/images/about/about-hero-brand-philosophy-visual.png",
           alt: "Brand philosophy and disciplined modernity visual for Intelligencia.",
         }}

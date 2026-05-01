@@ -1,9 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+
+import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
 
 export default function FeatureSections() {
   const sharedImage =
     "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1400&auto=format&fit=crop";
+  const resolvedSharedImage = usePreloadedAssetSrc(
+    "home-feature-sections",
+    sharedImage,
+  );
 
   return (
     <section className="feature-sections">
@@ -23,7 +31,7 @@ export default function FeatureSections() {
               alt="Leadership team reviewing strategy notes in a modern office"
               fill
               sizes="(max-width: 1180px) 100vw, 42vw"
-              src={sharedImage}
+              src={resolvedSharedImage}
             />
           </div>
           <div className="feature-sections__content">

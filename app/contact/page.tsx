@@ -25,6 +25,7 @@ export default function ContactPage() {
         title="Start the conversation with clarity."
         description="If you are navigating a website, systems, or technology challenge, this is the place to begin a focused discussion about what is needed and what comes next."
         image={{
+          assetId: "contact-hero-panel",
           src: "/images/contact/contact-hero-consultation-visual.png",
           alt: "Executive consultation visual for Intelligencia contact page.",
         }}

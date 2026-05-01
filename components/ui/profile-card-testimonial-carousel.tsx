@@ -5,6 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import { usePreloadedAssetSrc } from "@/components/asset-preload-provider";
 import { cn } from "@/lib/utils";
 
 export interface Testimonial {
@@ -12,6 +13,7 @@ export interface Testimonial {
   title: string;
   description: string;
   imageUrl: string;
+  assetId?: string;
   githubUrl?: string;
   twitterUrl?: string;
   youtubeUrl?: string;
@@ -26,6 +28,7 @@ const defaultTestimonials: Testimonial[] = [
       "Intelligencia didn't just deliver a solution, they transformed our business. Their team is strategic, responsive, and exceptional at what they do.",
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=900&auto=format&fit=crop",
+    assetId: "home-testimonial-james-carter",
     githubUrl: "#",
     twitterUrl: "#",
     youtubeUrl: "#",
@@ -38,6 +41,7 @@ const defaultTestimonials: Testimonial[] = [
       "They brought clarity to messy systems and turned disconnected tools into a process our team could finally trust. Adoption was immediate because the work felt practical from day one.",
     imageUrl:
       "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=900&q=80",
+    assetId: "home-testimonial-amelia-brooks",
     githubUrl: "#",
     twitterUrl: "#",
     youtubeUrl: "#",
@@ -50,6 +54,7 @@ const defaultTestimonials: Testimonial[] = [
       "From website delivery to workflow automation, every touchpoint felt intentional. They gave us a sharper digital presence and an operating foundation that scales with the business.",
     imageUrl:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=900&q=80",
+    assetId: "home-testimonial-daniel-reeves",
     githubUrl: "#",
     twitterUrl: "#",
     youtubeUrl: "#",
@@ -73,6 +78,10 @@ export function TestimonialCarousel({
   }
 
   const currentTestimonial = items[currentIndex];
+  const desktopImageSrc = usePreloadedAssetSrc(
+    currentTestimonial.assetId,
+    currentTestimonial.imageUrl,
+  );
 
   const handleNext = () => {
     setCurrentIndex((index) => (index + 1) % items.length);
@@ -96,7 +105,7 @@ export function TestimonialCarousel({
               className="testimonial-carousel__portrait-frame"
             >
               <Image
-                src={currentTestimonial.imageUrl}
+                src={desktopImageSrc}
                 alt={currentTestimonial.name}
                 width={420}
                 height={460}
@@ -141,7 +150,7 @@ export function TestimonialCarousel({
               transition={{ duration: 0.35, ease: "easeInOut" }}
             >
               <Image
-                src={currentTestimonial.imageUrl}
+                src={desktopImageSrc}
                 alt={currentTestimonial.name}
                 width={480}
                 height={480}

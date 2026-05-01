@@ -1,7 +1,6 @@
-import Image from "next/image";
-
 import { PageHero } from "@/components/page-hero";
 import { PageShell } from "@/components/page-shell";
+import { PreloadedImage } from "@/components/preloaded-image";
 import { AnimatedLayerButtonLink } from "@/components/ui/button";
 import { featuredCases, homeTestimonials } from "@/data/site";
 
@@ -34,6 +33,7 @@ export default function CaseStudiesPage() {
         title="Use proof to reduce risk for serious buyers."
         description="Selected engagements that show how Intelligencia improves positioning, operations, and technology direction with disciplined execution."
         image={{
+          assetId: "case-studies-hero-panel",
           src: "/images/case-studies/case-studies-hero-proof-visual.png",
           alt: "Business transformation proof visual for Intelligencia case studies page.",
         }}
@@ -43,7 +43,8 @@ export default function CaseStudiesPage() {
       />
       <section className="case-studies-viewport" aria-label="Case study proof">
         <section className="case-studies-panel case-studies-panel--spotlight">
-          <Image
+          <PreloadedImage
+            assetId="case-studies-spotlight"
             alt="Futuristic website redesign case study visual for Intelligencia."
             className="case-studies-spotlight__image"
             fill
@@ -82,7 +83,8 @@ export default function CaseStudiesPage() {
 
         <section className="case-studies-panel case-studies-panel--signals" aria-label="Client signal">
           <div className="case-studies-signal__portrait">
-            <Image
+            <PreloadedImage
+              assetId="case-studies-signal-portrait"
               alt=""
               fill
               sizes="(max-width: 820px) 280px, 320px"

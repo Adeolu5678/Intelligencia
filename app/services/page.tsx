@@ -19,6 +19,7 @@ const coreServices = [
     ],
     href: "/services/website-development",
     image: {
+      assetId: "services-core-website-development",
       src: "/images/services/website-development/website-development-hero-visual.png",
       alt: "Website development service visual for Intelligencia.",
     },
@@ -37,6 +38,7 @@ const coreServices = [
     ],
     href: "/services/systems-automation",
     image: {
+      assetId: "services-core-systems-automation",
       src: "/images/services/systems-automation/systems-automation-hero-visual.png",
       alt: "Workflow automation and systems integration visual for Intelligencia.",
     },
@@ -55,6 +57,7 @@ const coreServices = [
     ],
     href: "/services/technology-management",
     image: {
+      assetId: "services-core-technology-management",
       src: "/images/services/technology-management/technology-management-hero-visual.png",
       alt: "Technology management and advisory visual for Intelligencia.",
     },
@@ -115,6 +118,7 @@ export default function ServicesPage() {
         title="Websites, automation, and technology management for growing businesses."
         description="Intelligencia helps organizations improve how they present themselves online, how work moves internally, and how technology decisions are managed over time."
         image={{
+          assetId: "services-hero-panel",
           src: "/images/services/services-hero-service-model-visual.png",
           alt: "Integrated business technology services visual for Intelligencia services page.",
         }}
@@ -132,6 +136,7 @@ export default function ServicesPage() {
           <AnimatedTestimonials
             testimonials={coreServices.map((service) => ({
               alt: service.image.alt,
+              assetId: service.image.assetId,
               includes: service.includes,
               name: service.title,
               quote: service.summary,

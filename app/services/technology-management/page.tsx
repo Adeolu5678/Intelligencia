@@ -70,6 +70,7 @@ export default function TechnologyManagementPage() {
         title="Add strategic oversight to the technology layer of the business."
         description="This service page positions Intelligencia as an external partner for continuity, governance, and senior-level technical direction."
         image={{
+          assetId: "technology-management-hero-panel",
           src: "/images/services/technology-management/technology-management-hero-visual.png",
           alt: "Executive technology oversight visual for Intelligencia.",
         }}

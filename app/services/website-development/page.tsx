@@ -72,6 +72,7 @@ export default function WebsiteDevelopmentPage() {
         title="Build a website that strengthens trust, clarity, and commercial credibility."
         description="This service is framed as a strategic digital foundation for firms that need more than a generic design pass."
         image={{
+          assetId: "website-development-hero-panel",
           src: "/images/services/website-development/website-development-hero-visual.png",
           alt: "Premium website development workspace visual for Intelligencia.",
         }}

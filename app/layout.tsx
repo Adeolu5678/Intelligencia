@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 
+import { AssetPreloadProvider } from "@/components/asset-preload-provider";
 import { SiteChrome } from "@/components/site-chrome";
 
 import "./globals.css";
@@ -31,8 +32,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
+      <head>
+        <link rel="preload" as="image" href="/concept-c/hero-building.png" fetchPriority="high" />
+        <link rel="preload" as="image" href="/concept-c/operations-building-v2.png" />
+      </head>
       <body className={`${manrope.variable} ${cormorant.variable}`}>
-        <main>{children}</main>
+        <AssetPreloadProvider>
+          <main>{children}</main>
+        </AssetPreloadProvider>
         <SiteChrome />
       </body>
     </html>

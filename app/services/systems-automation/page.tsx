@@ -72,6 +72,7 @@ export default function SystemsAutomationPage() {
         title="Make operations more reliable by redesigning the systems behind the work."
         description="This page is structured to sell practical operational clarity, not technical buzzwords."
         image={{
+          assetId: "systems-automation-hero-panel",
           src: "/images/services/systems-automation/systems-automation-hero-visual.png",
           alt: "Workflow operations and systems automation visual for Intelligencia.",
         }}
