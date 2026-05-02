@@ -31,12 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <link rel="preload" as="image" href="/concept-c/hero-building.png" fetchPriority="high" />
         <link rel="preload" as="image" href="/concept-c/operations-building-v2.png" />
       </head>
-      <body className={`${manrope.variable} ${cormorant.variable}`}>
+      <body className={`${manrope.variable} ${cormorant.variable}`} suppressHydrationWarning>
         <AssetPreloadProvider>
           <main>{children}</main>
         </AssetPreloadProvider>

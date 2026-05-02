@@ -16,5 +16,5 @@ export function PreloadedImage({
 }: PreloadedImageProps) {
   const resolvedSrc = usePreloadedAssetSrc(assetId, src);
 
-  return <Image {...props} src={resolvedSrc} unoptimized />;
+  return <Image {...props} src={resolvedSrc} />;
 }

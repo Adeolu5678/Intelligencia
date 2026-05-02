@@ -5335,6 +5335,279 @@ select {
   gap: 18px;
 }
 
+@media (max-width: 1400px), (max-height: 860px) {
+  :root {
+    --max-width: 1360px;
+  }
+
+  .floating-nav {
+    --nav-height: 62px;
+    --nav-top: 12px;
+    --nav-padding-x: 40px;
+    --nav-logo-height: 34px;
+    --nav-link-padding-x: 18px;
+    --nav-link-gap: 8px;
+    --nav-edge-gap: 40px;
+  }
+
+  .floating-nav__link {
+    font-size: 0.84rem;
+  }
+
+  .page-shell--subpage .page-shell__scene--hero,
+  .page-shell--subpage .page-shell__hero-content {
+    height: auto;
+    min-height: min(100svh, 860px);
+    max-height: none;
+  }
+
+  .page-shell--subpage .page-shell__hero-content {
+    padding: 96px 0 24px;
+  }
+
+  .page-shell--subpage .page-shell__body-content:has(.services-viewport) > .container,
+  .page-shell--subpage .page-shell__body-content:has(.services-viewport) .page-stack,
+  .page-shell--subpage .page-shell__body-content:has(.case-studies-viewport) > .container,
+  .page-shell--subpage .page-shell__body-content:has(.case-studies-viewport) .page-stack,
+  .page-shell--subpage .page-shell__body-content:has(.about-viewport) > .container,
+  .page-shell--subpage .page-shell__body-content:has(.about-viewport) .page-stack {
+    height: auto;
+    min-height: calc(100svh - 32px);
+  }
+
+  .hero-content {
+    grid-template-columns: 51.5% 48.5%;
+  }
+
+  .hero-copy {
+    max-width: 800px;
+    width: min(100%, 800px);
+    margin: 0 0 20px 20px;
+    border-width: 3px;
+    border-radius: 16px;
+  }
+
+  .hero-copy__panel {
+    width: min(56%, 426px);
+    margin: 0 0 18px 18px;
+    padding: 18px 18px 16px;
+    border-radius: 18px;
+  }
+
+  .hero-copy h1,
+  .page-shell--subpage .hero--background-card .hero-copy h1 {
+    max-width: 13ch;
+    font-size: clamp(2.2rem, 3vw, 3.5rem);
+    line-height: 0.94;
+  }
+
+  .hero-copy p,
+  .page-shell--subpage .hero--background-card .hero-copy p {
+    max-width: 360px;
+    font-size: 0.82rem;
+    line-height: 1.48;
+  }
+
+  .operations-viewport,
+  .services-viewport,
+  .case-studies-viewport,
+  .about-viewport {
+    min-height: calc(100svh - 32px);
+  }
+
+  .operations-viewport,
+  .services-viewport {
+    padding-top: 32px;
+  }
+
+  .operations-viewport .solutions,
+  .operations-viewport .numbers,
+  .testimonial-band,
+  .services-quadrant {
+    padding: 14px;
+  }
+
+  .feature-carousel__shell,
+  .feature-sections__card,
+  .services-viewport .engagement-testimonials__card,
+  .services-viewport .engagement-testimonials__card--featured,
+  .case-studies-library-card {
+    border-radius: 24px;
+  }
+
+  .feature-carousel__shell {
+    grid-template-columns: minmax(228px, 29%) minmax(0, 71%);
+  }
+
+  .feature-carousel__rail,
+  .feature-carousel__stage {
+    min-height: 320px;
+  }
+
+  .feature-carousel__rail {
+    padding: 22px 18px;
+  }
+
+  .feature-carousel__stage {
+    padding: 22px 18px;
+  }
+
+  .feature-carousel__stack {
+    max-width: 248px;
+  }
+
+  .feature-sections {
+    gap: 14px;
+  }
+
+  .feature-sections__intro h2,
+  .case-studies-library__heading h2,
+  .case-studies-conversion__copy h2,
+  .about-zone--statement h2,
+  .about-zone--method h2,
+  .about-zone--standards h2,
+  .about-cta__copy h2,
+  .services-viewport .engagement-testimonials__intro h2,
+  .services-viewport .services-faq__intro .section-header h2,
+  .services-viewport .services-callout__copy h2 {
+    font-size: clamp(2rem, 2.6vw, 3.4rem);
+    line-height: 0.98;
+  }
+
+  .feature-sections__intro p,
+  .case-studies-library__heading p,
+  .case-studies-conversion__copy p,
+  .about-zone p,
+  .services-viewport .engagement-testimonials__intro p {
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .feature-sections__grid {
+    gap: 14px;
+  }
+
+  .feature-sections__card {
+    padding: 14px;
+  }
+
+  .feature-sections__media {
+    min-height: 208px;
+  }
+
+  .feature-sections__metric-card {
+    padding: 18px 18px 16px;
+  }
+
+  .feature-sections__metric-card strong {
+    font-size: 3.35rem;
+  }
+
+  .feature-sections__metric-subtitle,
+  .feature-sections__metric-label {
+    font-size: 0.82rem;
+  }
+
+  .testimonial-carousel--home {
+    width: min(100%, 640px);
+  }
+
+  .testimonial-carousel__desktop {
+    grid-template-columns: 264px minmax(0, 1fr);
+  }
+
+  .testimonial-carousel__portrait-frame {
+    width: 264px;
+  }
+
+  .testimonial-carousel__card {
+    min-height: 208px;
+    margin-left: -30px;
+    padding: 20px 24px 18px;
+    border-radius: 24px;
+  }
+
+  .testimonial-carousel__description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .case-studies-panel--spotlight,
+  .case-studies-panel--library,
+  .case-studies-panel--signals,
+  .case-studies-panel--conversion {
+    padding: 22px;
+  }
+
+  .case-studies-library__list {
+    gap: 12px;
+  }
+
+  .case-studies-library-card {
+    min-height: 190px;
+    padding: 18px;
+  }
+
+  .case-studies-library-card h3,
+  .case-studies-viewport .case-study-feature h3,
+  .case-studies-viewport .case-study-evidence h3 {
+    font-size: clamp(1rem, 1.1vw, 1.3rem);
+  }
+
+  .case-studies-signal blockquote {
+    font-size: clamp(2rem, 2.55vw, 3.25rem);
+  }
+
+  .case-studies-signal__portrait {
+    width: min(100%, 220px);
+  }
+
+  .services-viewport .animated-testimonials__grid {
+    grid-template-columns: minmax(150px, 0.42fr) minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .services-viewport .animated-testimonials__image-stack {
+    width: min(100%, 210px);
+    height: 238px;
+  }
+
+  .services-viewport .animated-testimonials__copy h3 {
+    font-size: clamp(1.35rem, 1.9vw, 2.4rem);
+  }
+
+  .services-viewport .animated-testimonials__quote,
+  .services-viewport .animated-testimonials__includes ul,
+  .services-viewport .engagement-testimonials__card p,
+  .services-viewport .services-faq-card p,
+  .services-viewport .services-callout__copy p {
+    font-size: 0.78rem;
+    line-height: 1.42;
+  }
+
+  .services-viewport .engagement-testimonials__card .ui-card__content {
+    padding: 16px;
+  }
+
+  .services-viewport .engagement-testimonials__card--featured p {
+    font-size: clamp(0.98rem, 1.16vw, 1.32rem);
+    line-height: 1.18;
+  }
+
+  .services-viewport .services-faq-card h3 {
+    font-size: clamp(0.88rem, 1.1vw, 1.12rem);
+  }
+
+  .services-viewport .services-callout__copy {
+    max-width: 640px;
+    padding: 0 16px;
+  }
+
+  .about-zone {
+    padding: 18px;
+  }
+}
+
 @media (max-width: 1180px) {
   .sticky-scene,
   .sticky-scene--hero,
