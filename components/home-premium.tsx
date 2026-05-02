@@ -68,12 +68,10 @@ export function HomePremium() {
           <main className="sticky-scene__content sticky-scene__content--operations">
             <section className="operations-viewport">
               <section className="solutions section" id="services">
-                <div className="section-label">OUR SOLUTIONS</div>
                 <FeatureCarousel className="feature-carousel--home" />
               </section>
 
               <section className="numbers section">
-                <div className="section-label">BY THE NUMBERS</div>
                 <FeatureSections />
               </section>
 

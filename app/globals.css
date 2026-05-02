@@ -46,6 +46,15 @@ body {
   padding: 24px;
   background: #071723;
   color: #f7f2ea;
+  transition:
+    opacity 520ms ease,
+    visibility 520ms ease;
+}
+
+.site-loading-overlay--closing {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .site-loading-overlay__panel {
@@ -55,6 +64,7 @@ body {
   border-radius: 28px;
   background: #071723;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  animation: site-loading-overlay-pulse 1800ms ease-in-out infinite alternate;
 }
 
 .site-loading-overlay__eyebrow {
@@ -98,6 +108,18 @@ body {
   background: linear-gradient(90deg, #d6ac6e 0%, #f1ddba 100%);
   border-radius: inherit;
   transition: transform 260ms ease-out;
+}
+
+@keyframes site-loading-overlay-pulse {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.32);
+  }
+
+  to {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 96px rgba(0, 0, 0, 0.38);
+  }
 }
 
 a {
@@ -851,7 +873,7 @@ select {
   height: 100%;
   min-height: 100%;
   gap: 0;
-  padding: 0;
+  padding: 18px 18px 0;
   color: #f7f1e8;
 }
 
@@ -883,7 +905,7 @@ select {
   grid-area: statement;
   display: grid;
   place-items: center;
-  padding: 20px 24px 10px 34px;
+  padding: 28px 24px 12px 34px;
 }
 
 .about-zone--statement .about-zone__header {
@@ -912,12 +934,13 @@ select {
   grid-area: method;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  align-content: center;
-  align-self: center;
+  align-content: start;
+  align-self: start;
   justify-self: center;
   gap: 16px;
-  width: min(100%, 920px);
-  margin: 0;
+  width: min(100%, 880px);
+  max-width: calc(100% - 28px);
+  margin: 10px auto 0;
   padding: 24px 22px 18px;
   border: 1px solid rgba(214, 172, 110, 0.18);
   border-radius: 30px;
@@ -982,7 +1005,7 @@ select {
 .about-zone--standards {
   grid-area: standards;
   display: grid;
-  align-content: center;
+  align-content: start;
   justify-items: start;
   gap: 12px;
   padding: 0 18px 12px 34px;
@@ -1010,9 +1033,11 @@ select {
 }
 
 .about-zone--standards {
-  width: min(100%, 760px);
+  width: min(100%, 720px);
+  max-width: calc(100% - 28px);
   justify-self: center;
-  align-self: center;
+  align-self: start;
+  margin: 0 auto;
   padding: 28px 24px 22px;
   border: 1px solid rgba(214, 172, 110, 0.18);
   border-radius: 30px;
@@ -1053,7 +1078,7 @@ select {
   grid-area: cta;
   display: grid;
   place-items: center;
-  padding: 4px 32px 18px 20px;
+  padding: 18px 32px 18px 20px;
 }
 
 .about-cta__copy {
@@ -2270,10 +2295,11 @@ select {
   grid-template-rows: auto minmax(0, 1fr);
   gap: 14px;
   align-content: stretch;
-  width: min(100%, 780px);
+  width: min(100%, 760px);
   justify-self: start;
   min-height: 508px;
   margin-top: 34px;
+  margin-left: clamp(18px, 2vw, 28px);
   padding: clamp(28px, 3vw, 40px) clamp(24px, 2.8vw, 38px);
   border: 1px solid rgba(232, 221, 206, 0.18);
   border-radius: 34px;
@@ -5605,6 +5631,48 @@ select {
 
   .about-zone {
     padding: 18px;
+  }
+
+  .about-viewport {
+    padding: 14px 14px 0;
+  }
+
+  .about-zone--method {
+    width: min(100%, 820px);
+    max-width: calc(100% - 20px);
+    margin-top: 18px;
+  }
+
+  .about-zone--standards {
+    width: min(100%, 680px);
+    max-width: calc(100% - 20px);
+  }
+
+  .about-zone--cta {
+    padding-top: 24px;
+  }
+
+  .operations-viewport .solutions,
+  .operations-viewport .numbers {
+    align-content: start;
+  }
+
+  .feature-sections {
+    max-width: 100%;
+  }
+
+  .feature-sections__grid {
+    align-items: start;
+  }
+
+  .feature-sections__card,
+  .feature-sections__metric-panel--standalone {
+    width: min(100%, 100%);
+  }
+
+  .case-studies-panel--spotlight {
+    width: min(100%, 720px);
+    margin-left: 18px;
   }
 }
 
