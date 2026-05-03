@@ -99,7 +99,13 @@ export function HomePremium() {
               <div className="footer-main">
                 <div className="footer-brand">
                   <Link className="brand brand-footer" href="/">
-                    <BrandMark compact />
+                    <div className="brand-lockup brand-lockup--compact">
+                      <BrandMark compact withWordmark={false} />
+                      <div className="brand-lockup__wordmark">
+                        <strong>INTELLIGENCIA INNOVATIONS AND MANAGEMENT</strong>
+                        <span>Technology Consulting & Management</span>
+                      </div>
+                    </div>
                   </Link>
                   <p>
                     We help ambitious organizations turn complexity into clarity and strategy into results.
@@ -148,7 +154,7 @@ export function HomePremium() {
               </div>
 
               <div className="footer-meta">
-                <span>© 2026 Intelligencia. All rights reserved.</span>
+                <span>© 2026 Intelligencia Innovations and Management. All rights reserved.</span>
                 <div>
                   <a href="#">Privacy Policy</a>
                   <a href="#">Terms of Service</a>

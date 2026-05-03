@@ -44,7 +44,10 @@ export default function AboutPage() {
         secondaryCta={{ href: "/services", label: "Explore Our Services" }}
         variant="backgroundCard"
       />
-      <section className="about-viewport" aria-label="About Intelligencia">
+      <section
+        className="about-viewport"
+        aria-label="About Intelligencia Innovations and Management"
+      >
         <section className="about-zone about-zone--statement">
           <div className="about-zone__header">
             <p className="about-lower__eyebrow">How We Think</p>
@@ -54,7 +57,7 @@ export default function AboutPage() {
               business clearer, not louder.
             </h2>
             <p>
-              Intelligencia combines website development, systems improvement,
+              Intelligencia Innovations and Management combines website development, systems improvement,
               and technology advisory so leaders can make better decisions about
               the digital layer of the business.
             </p>

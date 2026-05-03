@@ -20,7 +20,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Intelligencia",
+  title: "Intelligencia Innovations and Management",
   description:
     "Premium technology consulting and management for companies building stronger websites, systems, and operational workflows.",
 };

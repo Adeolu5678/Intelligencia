@@ -82,7 +82,7 @@ function LoadingOverlay({
       aria-label="Loading page assets"
     >
       <div className="site-loading-overlay__panel">
-        <span className="site-loading-overlay__eyebrow">Intelligencia</span>
+        <span className="site-loading-overlay__eyebrow">Intelligencia Innovations and Management</span>
         <h1>Preparing Greatness</h1>
         <p>{currentLabel}</p>
         <div className="site-loading-overlay__track" aria-hidden="true">

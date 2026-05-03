@@ -11,7 +11,7 @@ export default function FeatureSections() {
   return (
     <section className="feature-sections">
       <div className="feature-sections__intro">
-        <h2>Why Leaders Choose Intelligencia</h2>
+        <h2>Why Leaders Choose Intelligencia Innovations and Management</h2>
         <p>
           We combine strategic clarity, systems thinking, and practical
           implementation to help ambitious organizations operate better and grow

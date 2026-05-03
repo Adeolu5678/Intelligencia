@@ -94,7 +94,7 @@ const serviceFaqs = [
       "Start with the area causing the most business drag. If customers do not understand or trust the offer, start with the website. If internal work is slow or manual, start with automation and systems. If decisions feel scattered, start with technology management.",
   },
   {
-    question: "Can Intelligencia handle both strategy and implementation?",
+    question: "Can Intelligencia Innovations and Management handle both strategy and implementation?",
     answer:
       "Yes. The work can begin with an assessment or roadmap, then continue into website development, automation, integrations, reporting, or ongoing advisory support.",
   },

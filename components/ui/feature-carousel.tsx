@@ -262,7 +262,7 @@ export function FeatureCarousel({ className }: FeatureCarouselProps) {
                     )}
                   >
                     <span className="feature-carousel__live-dot" />
-                    <span>Intelligencia Focus</span>
+                    <span>Intelligencia Innovations and Management Focus</span>
                   </div>
                 </motion.div>
               );

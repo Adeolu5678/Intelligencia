@@ -24,7 +24,7 @@ const defaultTestimonials: Testimonial[] = [
     name: "James Carter",
     title: "COO, Summit Logistics",
     description:
-      "Intelligencia didn't just deliver a solution, they transformed our business. Their team is strategic, responsive, and exceptional at what they do.",
+      "Intelligencia Innovations and Management didn't just deliver a solution, they transformed our business. Their team is strategic, responsive, and exceptional at what they do.",
     imageUrl:
       "https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?q=80&w=900&auto=format&fit=crop",
     assetId: "home-testimonial-james-carter",
