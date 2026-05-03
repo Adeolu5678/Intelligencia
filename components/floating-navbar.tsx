@@ -25,9 +25,9 @@ function isActivePath(pathname: string, href: string) {
 }
 
 function setNavVariables(nav: HTMLElement, progress: number) {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  const isCompact = window.matchMedia("(max-width: 1023px)").matches;
 
-  if (isMobile) {
+  if (isCompact) {
     const sideInset = 8 + 10 * progress;
 
     nav.style.setProperty("--nav-top", `${12 - 6 * progress}px`);
@@ -43,7 +43,7 @@ function setNavVariables(nav: HTMLElement, progress: number) {
     return;
   }
 
-  const desktopFit = Math.min(Math.max((window.innerWidth - 1280) / 160, 0), 1);
+  const desktopFit = Math.min(Math.max((window.innerWidth - 1440) / 220, 0), 1);
   const openPadding = 24 + 40 * desktopFit;
   const openEdgeGap = 28 + 68 * desktopFit;
   const openLinkPadding = 16 + 8 * desktopFit;

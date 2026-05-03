@@ -5676,7 +5676,7 @@ select {
   }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1279px) {
   .sticky-scene,
   .sticky-scene--hero,
   .sticky-scene--operations {
@@ -5708,7 +5708,9 @@ select {
   .page-shell--subpage .page-shell__body-content:has(.services-viewport) > .container,
   .page-shell--subpage .page-shell__body-content:has(.services-viewport) .page-stack,
   .page-shell--subpage .page-shell__body-content:has(.case-studies-viewport) > .container,
-  .page-shell--subpage .page-shell__body-content:has(.case-studies-viewport) .page-stack {
+  .page-shell--subpage .page-shell__body-content:has(.case-studies-viewport) .page-stack,
+  .page-shell--subpage .page-shell__body-content:has(.about-viewport) > .container,
+  .page-shell--subpage .page-shell__body-content:has(.about-viewport) .page-stack {
     height: auto;
   }
 
@@ -5919,7 +5921,7 @@ select {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .floating-nav {
     --nav-height: 62px;
     --nav-top: 12px;
@@ -6087,7 +6089,7 @@ select {
   }
 
   .page-shell--subpage .hero--background-card .hero-copy {
-    width: calc(100vw - 36px);
+    width: min(100%, calc(100% - 36px));
     max-width: 520px;
     margin: 0 auto 20px;
     border-width: 3px;
