@@ -150,6 +150,10 @@ export function FloatingNavbar() {
   }, []);
 
   useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     if (!menuOpen) {
       document.body.style.overflow = "";
       return;
